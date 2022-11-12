@@ -15,7 +15,7 @@ puts "Creating sample data..."
   name: ['lovely ', 'lovely and spacious ', 'well decorated ', 'amazing, light, big and awesome '].sample + Faker::House.room,
   address: Faker::Address.street_address,
   description: Faker::Movies::HarryPotter.quote,
-  price_per_night: Faker::Number.number(digits: rand(2..5)) ,
+  price_per_night: Faker::Number.number(digits: rand(2..3)) ,
   number_of_guests: Faker::Number.number(digits: 1)
 )
 end

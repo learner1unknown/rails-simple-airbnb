@@ -13,6 +13,26 @@
   </head>
 
   <body>
+  <div class="d-flex navbar navbar-light p-3" style="background-color: #e3f2fd";>
+
+
+        <a class="navbar-brand mr-auto p-2" href="/flats">SkyBnB</a>
+
+        <div class="p-2">
+        <%= form_tag(flats_path, method: :get) do %>
+        <%= text_field_tag(:search, params[:search]) %>
+        <%= submit_tag ("Search"), class: "btn btn-primary" %>
+        <% end %>
+        </div>
+
+
+
+      <%= link_to "New Flat", new_flat_path , class: "btn btn-primary p-2"%>
+
+    </div>
+
+
+
     <%= yield %>
   </body>
 </html>
