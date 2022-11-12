@@ -12,7 +12,7 @@ Flat.destroy_all
 puts "Creating sample data..."
 7.times do
   Flat.create!(
-  name: ['lovely ', 'lovely and spacious ', 'well decorated ', 'amazing, light, big and awesome '] + Faker::House.room,
+  name: ['lovely ', 'lovely and spacious ', 'well decorated ', 'amazing, light, big and awesome '].sample + Faker::House.room,
   address: Faker::Address.street_address,
   description: Faker::Movies::HarryPotter.quote,
   price_per_night: Faker::Number.number(digits: rand(2..5)) ,
